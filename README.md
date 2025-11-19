@@ -102,18 +102,24 @@ Nuxt gère le routage par les fichiers. Nous verrons les **routes statiques et d
           <h2>Tableau de Bord Administrateur</h2>
         </template>
         ```
-  * **Middlewares :** Fonctions exécutées avant le chargement d'une page (dans `middleware/`). Ils utilisent **`MapsTo()`** pour la redirection.
-      * *Exemple de Middleware :*
-        ```typescript
-        // middleware/auth.ts
-        export default defineNuxtRouteMiddleware((to, from) => {
-          const isAuthenticated = false // Simule un utilisateur non authentifié
+  * **Middlewares :** Fonctions exécutées avant le chargement d'une page (dans `middleware/`). Ils utilisent **`MapsTo()`** pour la redirection. Par défaut les middleware sont inactifs, il faut les déclarer dans les pages via : 
+    * ```javascript
+      definePageMeta({
+         middleware: 'auth'
+      })
+      ```
+      ou le suffixer de ```.global``` par exemple ```middleware/auth.ts.global``` qui sera exécuté à chaque fois qu'une route est modifiée
+        * *Exemple de Middleware :*
+          ```typescript
+          // middleware/auth.ts
+          export default defineNuxtRouteMiddleware((to, from) => {
+            const isAuthenticated = false // Simule un utilisateur non authentifié
           
-          if (!isAuthenticated) {
-            return navigateTo('/') // Redirection vers la page d'accueil
-          }
-        })
-        ```
+            if (!isAuthenticated) {
+              return navigateTo('/') // Redirection vers la page d'accueil
+            }
+          })
+          ```
 
 ### Exercices
 
