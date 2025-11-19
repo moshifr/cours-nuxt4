@@ -73,6 +73,7 @@ Ce chapitre pose les fondations. Nous explorerons pourquoi Nuxt est le choix pri
 Nuxt gère le routage par les fichiers. Nous verrons les **routes statiques et dynamiques**, les **layouts** pour les éléments récurrents, et les **middlewares** pour contrôler l'accès aux pages.
 
 ### Concepts Essentiels 💡
+![Page structure](https://docs.mmi-troyes.fr/uploads/images/gallery/2024-11/54gg6UMoGjUjkcjA-image.png)
 
   * **Routes Dynamiques :** Utiliser des crochets `[]` pour capturer des segments d'URL.
       * *Exemple :* `pages/products/[id].vue`
@@ -118,7 +119,7 @@ Nuxt gère le routage par les fichiers. Nous verrons les **routes statiques et d
 
 1.  **Routage Dynamique :** Créez une page **`pages/products/[id].vue`** qui affiche l'ID du produit extrait du paramètre de la route.
 2.  **Layouts :** Créez un **`layouts/default.vue`** avec un `<header>` et le composant **`<NuxtPage />`**. Créez un **`layouts/admin.vue`** simple et appliquez-le à une page spécifique **`pages/admin/index.vue`** en utilisant `definePageMeta`.
-3.  **Middleware :** Créez un middleware **`middleware/auth.ts`** qui vérifie une condition simple et redirige l'utilisateur vers la page d'accueil si la condition n'est pas remplie. Appliquez ce middleware à votre page `admin/index.vue`.
+3.  **Middleware :** Créez un middleware **`middleware/auth.ts`** qui vérifie une condition simple et redirige l'utilisateur vers la page d'accueil si la condition n'est pas remplie. Appliquez ce middleware à votre page `admin/index.vue`, par exemple si dans le localStorage vous ne trouvez pas la propriété ```ìsLogged```.
 
 -----
 
