@@ -63,6 +63,7 @@ Ce chapitre pose les fondations. Nous explorerons pourquoi Nuxt est le choix pri
 1.  **Initialisation :** Créez un nouveau projet Nuxt 4.
 2.  **Configuration :** Modifiez le fichier **`nuxt.config.ts`** pour définir le titre global de l'application et ajouter un préfixe de route global (`/app`).
 3.  **Composant Auto-Importé :** Créez un composant simple (`<AppLogo>`) dans le dossier **`components/`** et utilisez-le dans **`app.vue`** **sans l'importer manuellement**.
+4. Utilisez l'api pokeapi pour récupérer une liste de pokemon pour l'url : **`localhost/pokemon`** et la page de détails : **`localhost/pokemon/1`** **`localhost/pokemon/2`** etc 
 
 -----
 
