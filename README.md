@@ -158,6 +158,7 @@ Ce chapitre est crucial pour la performance. Nous allons explorer les **composab
 1.  **`useFetch` de base :** Dans une page, utilisez **`useFetch('https://jsonplaceholder.typicode.com/users/1')`** pour afficher les données d'un utilisateur. Affichez un état de chargement (**`pending.value`**) et une gestion des erreurs (**`error.value`**).
 2.  **Rafraîchissement manuel :** Utilisez **`useFetch`** pour charger une liste d'éléments. Ajoutez un bouton pour appeler la fonction **`refresh()`** du composable afin de recharger les données côté client.
 3.  **Appel côté client (Client-Side) :** Effectuez un appel **`$fetch`** qui ne doit se produire **que côté client** (dans le hook **`onMounted`**) et expliquez pourquoi cette approche est parfois nécessaire.
+4. Utilisez ```useFetch``` pour récupérer la liste des pokemons et des pages de détails des pokemons, quelles différences y a t il avec le fetch utilisé précédemment ?
 
 -----
 
@@ -197,7 +198,7 @@ Nous étudierons les différents **modes de rendu** (SSR, CSR, SSG, Hybrid) et c
 1.  **Configuration SSG :** Configurez votre **`nuxt.config.ts`** pour pré-rendre une page spécifique (ex: `/about`) en mode SSG en utilisant l'option `prerender.routes`.
 2.  **Rapport de *Build* :** Lancez la commande de *build* (`npm run build`) et analysez le dossier **`.output/`**. Identifiez les fichiers générés pour le serveur (Nitro) et ceux pour le client (statiques).
 3.  **Force CSR :** Dans un composant spécifique, utilisez le composant **`<ClientOnly>`** pour forcer le rendu de ce composant côté client, et expliquez les cas d'usage où cela est pertinent.
-4. Utilisez ```useFetch``` pour récupérer la liste des pokemons et des pages de détails des pokemons, quelles différences y a t il avec le fetch utilisé précédemment ? 
+ 
 
 -----
 
