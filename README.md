@@ -267,30 +267,4 @@ L'écosystème de **modules** est la force de Nuxt, permettant d'ajouter des fon
 
 ## 🚀 Mini-Projet Final : Catalogue de Produits Dynamique
 
-Ce projet doit mobiliser les connaissances acquises dans les chapitres 2, 3 et 5.
-
-### Cahier des Charges
-
-1.  **Initialisation :** Projet Nuxt 4 vierge.
-2.  **API Serveur (Nitro) :**
-      * Créez un endpoint **`GET /api/products`** qui retourne un tableau d'objets `Product` simulés (ID, nom, prix, description).
-      * Créez un endpoint **`GET /api/products/[id]`** qui retourne un produit spécifique basé sur son ID, ou une erreur 404 (utilisez `createError` de Nitro).
-3.  **Interface Utilisateur (Pages) :**
-      * **Page d'Accueil (`/`) :** Affiche une liste de tous les produits. Le *fetching* des données doit utiliser **`useFetch`** pour bénéficier du **SSR**. Chaque produit est un lien vers sa page de détail.
-      * **Page de Détail (`/products/[id]`) :** Affiche les détails du produit correspondant. Utilisez **`useFetch`** pour récupérer le produit spécifique en se basant sur le paramètre d'URL. Gérez l'état 404 (produit non trouvé) avec l'utilitaire `showError` de Nuxt.
-4.  **Mise en Page :** Utilisez un **Layout** global qui inclut une barre de navigation simple et un pied de page.
-5.  **Middleware (Bonus) :** Ajoutez un **middleware** sur la page de détail pour vérifier que l'ID du produit est un nombre valide avant de tenter l'appel à l'API.
-
-### Critères de Notation
-
-| Critère | Poids | Description |
-| :--- | :--- | :--- |
-| **API Serveur (Nitro)** | 25% | Respect des endpoints, gestion des paramètres et de la logique de 404. |
-| **Data Fetching (SSR)** | 30% | Utilisation correcte et performante de `useFetch` (données chargées côté serveur, gestion des états `pending`/`error`). |
-| **Routage et Layouts** | 20% | Routage dynamique fonctionnel, utilisation d'un Layout et navigation cohérente. |
-| **Conventions et DX** | 15% | Respect de la structure Nuxt (auto-imports, structure des dossiers), code clair et typé (TypeScript). |
-| **Middleware/Gestion d'Erreur** | 10% | Implémentation du middleware (bonus) et gestion élégante de l'erreur 404. |
-
------
-
-Si vous souhaitez commencer le projet, je peux vous aider à initialiser le squelette de l'application \!
+Reprendre le projet de Docs.mmi
