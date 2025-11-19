@@ -62,8 +62,7 @@ Ce chapitre pose les fondations. Nous explorerons pourquoi Nuxt est le choix pri
 
 1.  **Initialisation :** Créez un nouveau projet Nuxt 4.
 2.  **Configuration :** Modifiez le fichier **`nuxt.config.ts`** pour définir le titre global de l'application et ajouter un préfixe de route global (`/app`).
-3.  **Composant Auto-Importé :** Créez un composant simple (`<AppLogo>`) dans le dossier **`components/`** et utilisez-le dans **`app.vue`** **sans l'importer manuellement**.
-4. Utilisez l'api pokeapi pour récupérer une liste de pokemon pour l'url : **`localhost/pokemon`** et la page de détails : **`localhost/pokemon/1`** **`localhost/pokemon/2`** etc 
+3.  **Composant Auto-Importé :** Créez un composant simple (`<AppLogo>`) dans le dossier **`components/`** et utilisez-le dans **`app.vue`** **sans l'importer manuellement**. 
 
 -----
 
@@ -121,6 +120,7 @@ Nuxt gère le routage par les fichiers. Nous verrons les **routes statiques et d
 1.  **Routage Dynamique :** Créez une page **`pages/products/[id].vue`** qui affiche l'ID du produit extrait du paramètre de la route.
 2.  **Layouts :** Créez un **`layouts/default.vue`** avec un `<header>` et le composant **`<NuxtPage />`**. Créez un **`layouts/admin.vue`** simple et appliquez-le à une page spécifique **`pages/admin/index.vue`** en utilisant `definePageMeta`.
 3.  **Middleware :** Créez un middleware **`middleware/auth.ts`** qui vérifie une condition simple et redirige l'utilisateur vers la page d'accueil si la condition n'est pas remplie. Appliquez ce middleware à votre page `admin/index.vue`, par exemple si dans le localStorage vous ne trouvez pas la propriété ```ìsLogged```.
+4. Utilisez l'api pokeapi pour récupérer une liste de pokemon pour l'url : **`localhost/pokemon`** et la page de détails : **`localhost/pokemon/1`** **`localhost/pokemon/2`** etc
 
 -----
 
